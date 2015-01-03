@@ -1,5 +1,9 @@
+var data = require('./data')
+
 console.log('in words')
 var threeLetterWords = "AbyAnyBayBeyBoyBuyCayCoyCryDayDeyDryFayFeyFlyFoyFryGayGeyGoyGuyHayHeyHoyIcyIvyJayJoyKayKeyLayLeyMayNayOxyPayPlyPryRaySayShySkySlySoySpyStyThyToyTryWayWhyWryYay"
+var allThreeLetterWords = "aahaalaasabaaboabsabyaceactaddadoadsadzaffaftagaageagoagsahaahiahsaidailaimainairaisaitalaalbaleallalpalsaltamaamiampamuanaandaneaniantanyapeapoappaptarbarcarearfarkarmarsartashaskaspassateattaukavaaveavoawaaweawlawnaxeayeaysazobaabadbagbahbalbambanbapbarbasbatbaybedbeebegbelbenbesbetbeybibbidbigbinbiobisbitbizboabobbodbogboobopbosbotbowboxboybrabrobrrbubbudbugbumbunburbusbutbuybyebyscabcadcamcancapcarcatcawcayceecelcepchicigciscobcodcogcolconcoocopcorcoscotcowcoxcoycozcrucrycubcudcuecumcupcurcutcwmdabdaddagdahdakdaldamdandapdawdaydebdeedefdeldendevdewdexdeydibdiddiedifdigdimdindipdisditdocdoedogdoldomdondordosdotdowdrydubdudduedugduhduidunduodupdyeeareateauebbecuedhedseekeeleffefsefteggegoekeeldelfelkellelmelsemeemsemuendengenseoneraereergernerrersessetaetheveeweeyefabfadfagfanfarfasfatfaxfayfedfeefehfemfenferfesfetfeufewfeyfezfibfidfiefigfilfinfirfitfixfizfluflyfobfoefogfohfonfopforfoufoxfoyfrofryfubfudfugfunfurgabgadgaegaggalgamgangapgargasgatgaygedgeegelgemgengetgeyghigibgidgiegiggingipgitgnugoagobgodgoogorgosgotgoxgoygulgumgungutguvguygymgyphadhaehaghahhajhamhaohaphashathawhayhehhemhenhepherheshethewhexheyhichidhiehimhinhiphishithmmhobhodhoehoghonhophoshothowhoyhubhuehughuhhumhunhuphuthypiceichickicyidsiffifsiggilkillimpinkinninsionireirkismitsivyjabjagjamjarjawjayjeejetjeujewjibjigjinjobjoejogjotjowjoyjugjunjusjutkabkaekafkaskatkaykeakefkegkenkepkexkeykhikidkifkinkipkirkiskitkoakobkoikopkorkoskuekyelablacladlaglamlaplarlaslatlavlawlaxlaylealedleelegleileklesletleulevlexleylezliblidlielinliplislitlobloglooloplotlowloxluglumluvluxlyemacmadmaemagmanmapmarmasmatmawmaxmaymedmegmelmemmenmetmewmhomibmicmidmigmilmimmirmismixmoamobmocmodmogmolmommonmoomopmormosmotmowmudmugmummunmusmutmycnabnaenagnahnamnannapnawnaynebneenegnetnewnibnilnimnipnitnixnobnodnognohnomnoonornosnotnownthnubnunnusnutoafoakoaroatobaobeobiocaodaoddodeodsoesoffoftohmohoohsoilokaokeoldoleomsoneonoonsoohootopeopsoptoraorborcoreorsortoseoudouroutovaoweowlownoxooxypacpadpahpalpampanpapparpaspatpawpaxpaypeapecpedpeepegpehpenpepperpespetpewphiphtpiapicpiepigpinpippispitpiupixplypodpohpoipolpompoopoppotpowpoxproprypsipstpubpudpugpulpunpuppurpusputpyapyepyxqatqisquaradragrahrairajramranraprasratrawraxrayrebrecredreerefregreiremrepresretrevrexrhoriaribridrifrigrimrinriprobrocrodroeromrotrowrubruerugrumrunrutryaryesabsacsadsaesagsalsapsatsausawsaxsayseasecseesegseiselsensersetsewsexshasheshhshysibsicsimsinsipsirsissitsixskaskiskyslysobsodsolsomsonsopsossotsousowsoxsoyspaspysristysubsuesuksumsunsupsuqsyntabtadtaetagtajtamtantaotaptartastattautavtawtaxteatedteetegteltentettewthethothytictietiltintiptistittodtoetogtomtontootoptortottowtoytrytsktubtugtuituntuptuttuxtwatwotyeudoughukeuluummumpunsupoupsurburdurnurpuseutauteutsvacvanvarvasvatvauvavvawveevegvetvexviavidvievigvimvisvoevowvoxvugvumwabwadwaewagwanwapwarwaswatwawwaxwaywebwedweewenwetwhawhowhywigwinwiswitwizwoewogwokwonwoowopwoswotwowwrywudwyewynxisyagyahyakyamyapyaryawyayyeayehyenyepyesyetyewyidyinyipyobyodyokyomyonyouyowyukyumyupzagzapzaszaxzedzeezekzepzigzinzipzitzoazoozuzzzz"
+var allTwoLetterWords = "aaabadaeagahaialamanarasatawaxaybabebibobydedoedefehelemeneresetexfafegohahehihmhoidifinisitjokakilalilomamemimmmomumynanenonuodoeofohoiomonoporosowoxoypapepiqireshsisotatitouhumunupusutwewoxixuyayeyoza"
 var fourLetterWords = "AblyAchyAeryAglyAhoyAiryAlkyAllyArmyArtyAshyAwayAwnyAwryBabyBevyBodyBogyBonyBoxyBrayBuoyBuryBusyCagyCakyCavyChayCityClayCloyCokyColyConyCopyCoryCosyCowyCozyDavyDefyDemyDenyDewyDexyDidyDobyDogyDopyDoryDotyDoxyDozyDrayDulyDutyEasyEddyEdgyEelyEeryEggyElmyEmmyEnvyEspyEyryFlayFleyFogyFoxyFozyFrayFumyFuryGabyGamyGapyGleyGobyGoryGrayGreyHazyHolyHomyIckyIdlyIffyIllyImmyInbyInkyInlyJivyJoeyJokyJuryLacyLadyLakyLazyLevyLilyLimyLinyLogyLoryLunyManyMazyMiryMityMolyMonyMopyNaryNavyNixyNosyOakyObeyOfayOilyOkayOldyOnlyOozyOrbyOrgyPacyPalyPatyPilyPinyPipyPityPixyPlayPloyPogyPokyPolyPonyPosyPoxyPrayPreyPunyQuayQueyRacyRelyRimyRopyRosyRubyRulySagyScrySexyShaySizySlaySpaySpryStaySteySwayTheyTidyTinyTivyTobyTodyTonyToryTowyTrayTreyTroyTypyUglyUndyUpbyVaryVeryVinyWadyWalyWanyWaryWavyWaxyWheyWilyWinyWiryZany"
 
 var splitWordString = function(input, number){
@@ -9,27 +13,36 @@ var splitWordString = function(input, number){
     for (var j = 0; j < number; j++) {
       localword += input[i+j]
     };
+    localword = localword.toLowerCase();
     output.push(localword)
     var localword = ""
   };
   return output;
 }
 
-console.log(splitWordString(threeLetterWords, 3))
-console.log(splitWordString(fourLetterWords, 4))
+console.log(splitWordString(allTwoLetterWords, 2))
+// console.log(splitWordString(threeLetterWords, 3))
+// console.log(splitWordString(fourLetterWords, 4))
+// console.log(splitWordString(allThreeLetterWords, 3))
 
 
-var threeLetterWordsArray = ["Aby", "Any", "Bay", "Bey", "Boy", "Buy", "Cay", "Coy", "Cry", "Day", "Dey", "Dry", "Fay", "Fey", "Fly", "Foy", "Fry", "Gay", "Gey", "Goy", "Guy", "Hay", "Hey", "Hoy", "Icy", "Ivy", "Jay", "Joy", "Kay", "Key", "Lay", "Ley", "May", "Nay", "Oxy", "Pay", "Ply", "Pry", "Ray", "Say", "Shy", "Sky", "Sly", "Soy", "Spy", "Sty", "Thy", "Toy", "Try", "Way", "Why", "Wry", "Yay"]
-var fourLetterWordsArray = ["Ably", "Achy", "Aery", "Agly", "Ahoy", "Airy", "Alky", "Ally", "Army", "Arty", "Ashy", "Away", "Awny", "Awry", "Baby", "Bevy", "Body", "Bogy", "Bony", "Boxy", "Bray", "Buoy", "Bury", "Busy", "Cagy", "Caky", "Cavy", "Chay", "City", "Clay", "Cloy", "Coky", "Coly", "Cony", "Copy", "Cory", "Cosy", "Cowy", "Cozy", "Davy", "Defy", "Demy", "Deny", "Dewy", "Dexy", "Didy", "Doby", "Dogy", "Dopy", "Dory", "Doty", "Doxy", "Dozy", "Dray", "Duly", "Duty", "Easy", "Eddy", "Edgy", "Eely", "Eery", "Eggy", "Elmy", "Emmy", "Envy", "Espy", "Eyry", "Flay", "Fley", "Fogy", "Foxy", "Fozy", "Fray", "Fumy", "Fury", "Gaby", "Gamy", "Gapy", "Gley", "Goby", "Gory", "Gray", "Grey", "Hazy", "Holy", "Homy", "Icky", "Idly", "Iffy", "Illy", "Immy", "Inby", "Inky", "Inly", "Jivy", "Joey", "Joky", "Jury", "Lacy", "Lady", "Laky", "Lazy", "Levy", "Lily", "Limy", "Liny", "Logy", "Lory", "Luny", "Many", "Mazy", "Miry", "Mity", "Moly", "Mony", "Mopy", "Nary", "Navy", "Nixy", "Nosy", "Oaky", "Obey", "Ofay", "Oily", "Okay", "Oldy", "Only", "Oozy", "Orby", "Orgy", "Pacy", "Paly", "Paty", "Pily", "Piny", "Pipy", "Pity", "Pixy", "Play", "Ploy", "Pogy", "Poky", "Poly", "Pony", "Posy", "Poxy", "Pray", "Prey", "Puny", "Quay", "Quey", "Racy", "Rely", "Rimy", "Ropy", "Rosy", "Ruby", "Ruly", "Sagy", "Scry", "Sexy", "Shay", "Sizy", "Slay", "Spay", "Spry", "Stay", "Stey", "Sway", "They", "Tidy", "Tiny", "Tivy", "Toby", "Tody", "Tony", "Tory", "Towy", "Tray", "Trey", "Troy", "Typy", "Ugly", "Undy", "Upby", "Vary", "Very", "Viny", "Wady", "Waly", "Wany", "Wary", "Wavy", "Waxy", "Whey", "Wily", "Winy", "Wiry", "Zany"]
 
 var firstThreeEqual = function(arrayOne, arrayTwo){
   var output = {}
   for (var i = 0; i < arrayOne.length; i++) {
     for (var j = 0; j < arrayTwo.length; j++) {
-      if (arrayOne[i].split(3) == arrayTwo[j].split(3)){
-        output[arrayOne[i]] = output[arrayTwo[j]]
-      }
+      // var a = arrayOne[i].slice(0,3)
+      // var b = arrayTwo[j].slice(0,3)
+      // console.log('arrayOne[i]', a)
+      // console.log('arrayTwo[j]', b)
+      if (arrayOne[i].slice(0,3) == arrayTwo[j].slice(0,3)){
 
+        output[arrayOne[i]] = arrayTwo[j]
+      }
     };
   };
+  return output;
 }
+
+console.log(firstThreeEqual(['all'],['ally']))
+console.log(firstThreeEqual(data.allThreeLetterWordsArray,data.fourLetterWordsArray))

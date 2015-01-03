@@ -5,14 +5,9 @@ var fourLetterWords = "AblyAchyAeryAglyAhoyAiryAlkyAllyArmyArtyAshyAwayAwnyAwryB
 var splitWordString = function(input, number){
   var output = [];
   for (var i = 0; i < input.length; i += number) {
-    console.log(i)
     var localword = ""
     for (var j = 0; j < number; j++) {
-      console.log('localword', localword)
-      console.log('i+j', i+j)
-      console.log(input[i+j])
       localword += input[i+j]
-      console.log(localword)
     };
     output.push(localword)
     var localword = ""

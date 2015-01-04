@@ -20,7 +20,7 @@ var splitWordString = function(input, number){
   return output;
 }
 
-console.log(splitWordString(allTwoLetterWords, 2))
+// console.log(splitWordString(allTwoLetterWords, 2))
 // console.log(splitWordString(threeLetterWords, 3))
 // console.log(splitWordString(fourLetterWords, 4))
 // console.log(splitWordString(allThreeLetterWords, 3))
@@ -31,10 +31,10 @@ var firstThreeEqual = function(arrayOne, arrayTwo){
   var output = {}
   for (var i = 0; i < arrayOne.length; i++) {
     for (var j = 0; j < arrayTwo.length; j++) {
-      // var a = arrayOne[i].slice(0,3)
-      // var b = arrayTwo[j].slice(0,3)
-      // console.log('arrayOne[i]', a)
-      // console.log('arrayTwo[j]', b)
+      var a = arrayOne[i].slice(0,3)
+      var b = arrayTwo[j].slice(0,3)
+      console.log('arrayOne[i]', a)
+      console.log('arrayTwo[j]', b)
       if (arrayOne[i].slice(0,3) == arrayTwo[j].slice(0,3)){
 
         output[arrayOne[i]] = arrayTwo[j]
@@ -45,4 +45,4 @@ var firstThreeEqual = function(arrayOne, arrayTwo){
 }
 
 console.log(firstThreeEqual(['all'],['ally']))
-console.log(firstThreeEqual(data.allThreeLetterWordsArray,data.fourLetterWordsArray))
+console.log(firstThreeEqual(data.allTwoLetterWordsArray,data.threeLetterWordsArray))

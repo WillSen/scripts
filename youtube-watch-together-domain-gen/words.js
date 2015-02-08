@@ -33,8 +33,8 @@ var firstThreeEqual = function(arrayOne, arrayTwo){
     for (var j = 0; j < arrayTwo.length; j++) {
       var a = arrayOne[i].slice(0,3)
       var b = arrayTwo[j].slice(0,3)
-      console.log('arrayOne[i]', a)
-      console.log('arrayTwo[j]', b)
+      // console.log('arrayOne[i]', a)
+      // console.log('arrayTwo[j]', b)
       if (arrayOne[i].slice(0,3) == arrayTwo[j].slice(0,3)){
 
         output[arrayOne[i]] = arrayTwo[j]

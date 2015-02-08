@@ -1,7 +1,8 @@
 var express = require('express'),
     app = express(),
-    server = require('http').Server(app),
-    words = require('./youtube-watch-together-domain-gen/words')
+    server = require('http').Server(app)
+    // words = require('./youtube-watch-together-domain-gen/words')
+    // genDomain = require('./youtube-watch-together-domain-gen/genDomain')
 
 server.listen(5050);
 
